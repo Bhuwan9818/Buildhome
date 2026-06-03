@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dhanyashree Midtown — Dhanyashree Homes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { padding-top: 100px; }
+    .project-hero { height: 500px; background-size: cover; background-position: center; border-radius: 4px; position: relative; margin-bottom: 48px; overflow: hidden; }
+    .project-hero::after { content:''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(28,13,6,.1) 0%, rgba(28,13,6,.75) 100%); }
+    .hero-inner { position: absolute; z-index: 2; padding: 48px; color: var(--cream); display: flex; flex-direction: column; justify-content: flex-end; height: 100%; width: 100%; }
+    .project-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 5vw, 52px); font-weight: 400; margin-bottom: 8px; line-height: 1.1; }
+    .project-meta { color: var(--text-muted); font-size: 13px; letter-spacing: 1px; }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--amber); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--cream); }
+    .project-body { display: grid; grid-template-columns: 1fr 380px; gap: 40px; margin-bottom: 80px; align-items: start; }
+    .project-desc { font-size: 15px; line-height: 1.9; color: var(--text-muted); margin-bottom: 24px; }
+    .project-body h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; color: var(--cream); margin-top: 32px; margin-bottom: 12px; }
+    .project-body ul { color: var(--text-muted); line-height: 2; padding-left: 0; list-style: none; }
+    .project-body ul li::before { content: '—'; color: var(--amber); margin-right: 10px; }
+    .project-side { background: rgba(201,139,74,.05); padding: 28px; border: 1px solid rgba(201,139,74,.12); border-radius: 4px; position: sticky; top: 110px; }
+    .project-side strong { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--amber); display: block; margin-bottom: 20px; }
+    .specs { display: grid; gap: 2px; margin-top: 12px; }
+    .spec { display: flex; justify-content: space-between; font-size: 13px; color: var(--cream); padding: 12px 14px; background: rgba(255,255,255,.02); border: 1px solid rgba(201,139,74,.06); }
+    .spec span:first-child { color: var(--text-muted); font-size: 11px; letter-spacing: 1px; }
+    .spec span:last-child { font-family: 'Cormorant Garamond', serif; font-size: 16px; }
+    .side-note { margin-top: 20px; color: var(--text-muted); font-size: 12px; line-height: 1.8; border-top: 1px solid rgba(201,139,74,.1); padding-top: 16px; }
+    .btn-primary { display: block; background: var(--amber); color: var(--dark); padding: 14px 32px; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; font-family: 'Montserrat', sans-serif; font-weight: 500; text-decoration: none; margin-top: 20px; transition: all .3s; text-align: center; }
+    .btn-primary:hover { background: var(--amber-light); }
+    .back-link { display: inline-flex; align-items: center; gap: 10px; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--amber); text-decoration: none; transition: gap .3s; margin-top: 32px; }
+    .back-link:hover { gap: 18px; }
+    @media (max-width: 900px) { .project-body { grid-template-columns: 1fr; } .project-side { position: static; } }
+    @media (max-width: 600px) { body { padding-top: 80px; } .project-hero { height: 260px; } .hero-inner { padding: 20px; } .container { padding: 0 16px; } }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <section class="project-hero" style="background-image:url('images/WhatsApp Image 2026-06-03 at 9.50.44 AM (1).jpeg')">
+    <div class="hero-inner">
+      <div class="project-title">Dhanyashree Midtown</div>
+      <div class="project-meta">Shantikunj, South Delhi &nbsp;·&nbsp; 2 / 3 BHK &nbsp;·&nbsp; Urban Residences</div>
+    </div>
+  </section>
+
+  <nav class="breadcrumb">
+    <a href="index.html">Home</a>
+    <span>›</span>
+    <span>Projects</span>
+    <span>›</span>
+    <span>Dhanyashree Midtown</span>
+  </nav>
+
+  <div class="project-body">
+    <div>
+      <p class="project-desc">Dhanyashree Midtown delivers thoughtfully-planned 2 and 3BHK residences designed for modern urban lifestyles. Efficient layouts, quality finishes and convenient amenities make it an excellent choice for young families and professionals seeking a foothold in South Delhi.</p>
+
+      <h3>Highlights</h3>
+      <ul>
+        <li>Community lounge and kids' play area</li>
+        <li>Secure basement parking and CCTV surveillance</li>
+        <li>Well-lit corridors, lifts and common areas</li>
+        <li>Energy-efficient systems and LED lighting</li>
+        <li>Low-maintenance exterior finishes</li>
+      </ul>
+
+      <h3>Location Advantage</h3>
+      <ul>
+        <li>Central Shantikunj location</li>
+        <li>Metro connectivity within reach</li>
+        <li>Established social infrastructure</li>
+        <li>Multiple transport and commute options</li>
+      </ul>
+
+      <a class="back-link" href="index.html#projects">← Back to All Projects</a>
+    </div>
+
+    <aside class="project-side">
+      <strong>Project Details</strong>
+      <div class="specs">
+        <div class="spec"><span>Configuration</span><span>2 / 3 BHK</span></div>
+        <div class="spec"><span>Status</span><span>Pre-launch</span></div>
+        <div class="spec"><span>Price</span><span>On Request</span></div>
+        <div class="spec"><span>Area</span><span>650 – 1250 sqft</span></div>
+        <div class="spec"><span>Location</span><span>Shantikunj, South Delhi</span></div>
+      </div>
+      <div class="side-note">For floor plans, pricing details and site visits, contact our sales team or use the enquiry form.</div>
+      <a class="btn-primary" href="index.html#enquiry">Register Interest</a>
+    </aside>
+  </div>
+</div>
+
+<script src="components.js"></script>
+<script>
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('navbar');
+    if (nav) nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+</script>
+</body>
+</html>
