@@ -47,3 +47,102 @@ body::before {
   pointer-events: none;
   z-index: 9996;
 }
+
+/* ─── WHATSAPP FLOATING BUTTON ─── */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #25D366 0%, #1EA952 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s ease;
+  color: white;
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  width: 65px;
+  height: 65px;
+  bottom: 25px;
+  right: 25px;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+  transform: scale(1.08);
+}
+
+.whatsapp-float svg {
+  width: 32px;
+  height: 32px;
+  fill: currentColor;
+}
+
+/* Responsive sizes */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 55px;
+    height: 55px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .whatsapp-float:hover {
+    width: 60px;
+    height: 60px;
+    bottom: 17px;
+    right: 17px;
+  }
+
+  .whatsapp-float svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .whatsapp-float:hover {
+    width: 55px;
+    height: 55px;
+    bottom: 12px;
+    right: 12px;
+  }
+
+  .whatsapp-float svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.form-feedback {
+  margin-top: 14px;
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 10px 12px;
+  border-radius: 4px;
+  display: none;
+}
+
+.form-feedback.success {
+  background: rgba(110, 203, 110, 0.12);
+  color: #9dd89d;
+  border: 1px solid rgba(110, 203, 110, 0.3);
+}
+
+.form-feedback.error {
+  background: rgba(224, 112, 112, 0.12);
+  color: #f3b4b4;
+  border: 1px solid rgba(224, 112, 112, 0.3);
+}

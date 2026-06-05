@@ -416,18 +416,27 @@ footer {
 }
 .social-icon {
   width: 38px; height: 38px;
-  border: 1px solid rgba(201,139,74,.2);
-  display: flex;
+  border: 1px solid rgba(201,139,74,.3);
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-muted);
-  font-size: 13px;
+  color: var(--text-light);
   text-decoration: none;
-  transition: all .3s;
+  transition: all .3s ease;
+  border-radius: 4px;
+  background: transparent;
+}
+.social-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  display: block;
 }
 .social-icon:hover {
   border-color: var(--amber);
   color: var(--amber);
+  background: rgba(201,139,74,.08);
+  transform: translateY(-2px);
 }
 .footer-col h4 {
   font-size: 9px;
@@ -631,6 +640,64 @@ body.project-page {
   .project-hero { height: 220px; }
   .project-title { font-size: 22px; }
   .spec { flex-direction: column; gap: 4px; }
+}
+
+/* ─── WHATSAPP FLOATING BUTTON ─── */
+.whatsapp-float {
+  position: fixed;
+  bottom: 26px;
+  right: 26px;
+  width: 56px;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #25D366 0%, #1DA851 100%);
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 14px 30px rgba(37, 211, 102, 0.23);
+  z-index: 9999;
+  transition: transform 0.24s ease, box-shadow 0.24s ease, background 0.24s ease;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 20px 36px rgba(37, 211, 102, 0.32);
+}
+
+.whatsapp-float svg {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .whatsapp-float {
+    bottom: 18px;
+    right: 18px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .whatsapp-float svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .whatsapp-float {
+    bottom: 14px;
+    right: 14px;
+    width: 46px;
+    height: 46px;
+  }
+
+  .whatsapp-float svg {
+    width: 22px;
+    height: 22px;
+  }
 }
 
 /* ══════════════════════════════════════════════

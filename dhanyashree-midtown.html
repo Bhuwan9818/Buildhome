@@ -31,6 +31,7 @@
     .side-note { margin-top: 20px; color: var(--text-muted); font-size: 12px; line-height: 1.8; border-top: 1px solid rgba(201,139,74,.1); padding-top: 16px; }
     .btn-primary { display: block; background: var(--amber); color: var(--dark); padding: 14px 32px; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; font-family: 'Montserrat', sans-serif; font-weight: 500; text-decoration: none; margin-top: 20px; transition: all .3s; text-align: center; }
     .btn-primary:hover { background: var(--amber-light); }
+    button.btn-primary { border: none; cursor: pointer; width: 100%; font-weight: 500; }
     .back-link { display: inline-flex; align-items: center; gap: 10px; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--amber); text-decoration: none; transition: gap .3s; margin-top: 32px; }
     .back-link:hover { gap: 18px; }
     @media (max-width: 900px) { .project-body { grid-template-columns: 1fr; } .project-side { position: static; } }
@@ -88,18 +89,25 @@
         <div class="spec"><span>Area</span><span>650 – 1250 sqft</span></div>
         <div class="spec"><span>Location</span><span>Shantikunj, South Delhi</span></div>
       </div>
-      <div class="side-note">For floor plans, pricing details and site visits, contact our sales team or use the enquiry form.</div>
-      <a class="btn-primary" href="index.html#enquiry">Register Interest</a>
+      <div class="side-note">For floor plans, pricing details and site visits, contact our sales team or use the enquiry form below.</div>
+      <button class="btn-primary" onclick="openEnquiryPopup('Dhanyashree Midtown')">Register Interest</button>
     </aside>
   </div>
 </div>
 
 <script src="components.js"></script>
+<script src="enquiry_popup.js"></script>
 <script>
   window.addEventListener('scroll', () => {
     const nav = document.getElementById('navbar');
     if (nav) nav.classList.toggle('scrolled', window.scrollY > 60);
   });
 </script>
+
+<a id="whatsapp-btn" class="whatsapp-float" title="Chat with us on WhatsApp" href="https://wa.me/919311373023?text=Hi!%20I%20am%20interested%20in%20your%20projects." target="_blank" rel="noopener noreferrer">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+    <path d="M380.9 97.1C339 55 286.4 32 231.4 32c-54.8.1-107.2 23.1-148.1 64.4C42.8 137.8 19.8 190.4 19.8 245c0 45.1 12.2 89 35.4 127.4L7 480l112.7-29.5c36.9 20.2 78.6 30.6 121.1 30.6h.1c54.9 0 107.5-23 148.5-64.5 40.9-41.4 63.9-94 63.9-149.1-.1-54.9-23.1-107.3-64-148.9zm-149 327.5c-37.4 0-73.8-10-105.5-28.9l-7.5-4.4-66.8 17.5 17.9-65.2-4.8-7.6c-20.1-31.8-30.7-68.6-30.6-107.3.1-107.3 87.4-194.6 194.8-194.6 52.2 0 101.2 20.3 138.1 57.2 36.9 36.9 57.1 85.8 57.1 138 0 107.4-87.3 194.7-194.7 194.7zm101.2-138.5c-5.5-2.7-32.5-16-37.5-17.8-5-1.9-8.6-2.7-12.2 2.7-3.6 5.4-14 17.8-17.1 21.5-3.1 3.7-6.2 4.2-11.7 1.4-31.9-15.9-52.7-28.4-73.7-64.4-5.6-9.6 5.6-8.9 16.1-29.5 1.8-3.7.9-6.9-.5-9.6-1.4-2.7-12.2-29.4-16.7-40.2-4.4-10.6-8.9-9.2-12.2-9.4-3.2-.3-6.9-.4-10.4-.4-3.4 0-8.9 1.3-13.5 6.9-4.6 5.6-17.6 17.2-17.6 41.9 0 24.7 18 48.5 20.5 51.9 2.7 3.5 37.7 57.5 91.4 80.6 12.8 5.5 22.8 8.8 30.6 11.3 12.8 4 24.4 3.4 33.6 2.1 10.2-1.5 32.5-13.3 37.1-26.1 4.7-12.8 4.7-23.8 3.3-26.1-1.4-2.3-5.1-3.7-10.6-6.4z"/>
+  </svg>
+</a>
 </body>
 </html>
