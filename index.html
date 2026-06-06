@@ -405,7 +405,7 @@
       <div class="stat-label">Luxury Projects</div>
     </div>
     <div class="stat-card">
-      <div class="stat-num">15<span style="font-size:22px;color:var(--brown-light)">+</span></div>
+      <div class="stat-num">7<span style="font-size:22px;color:var(--brown-light)">+</span></div>
       <div class="stat-label">Years of Mastery</div>
     </div>
   </div>
@@ -565,7 +565,7 @@
         </div>
       </div>
       <div class="project-card">
-        <img class="project-img" src="https://images.unsplash.com/photo-1505691723518-36a4e5a8c9f7?w=700&q=80" alt="Dhanyashree Midtown"/>
+        <img class="project-img" src="https://i.pinimg.com/originals/24/9f/9a/249f9a9748df7c1c83fa54986fb7405a.jpg" alt="Dhanyashree Midtown"/>
         <div class="project-num">05</div>
         <div class="project-overlay"></div>
         <div class="project-info">
@@ -585,7 +585,7 @@
 <section id="why">
   <div style="text-align:center" class="reveal">
     <div class="section-eyebrow" style="justify-content:center">Why Choose Us</div>
-    <h2 class="section-title">The <em>DH</em> Difference</h2>
+    <h2 class="section-title">The <em>Dhanyashree Homes</em> Difference</h2>
   </div>
   <div class="why-grid">
     <div class="why-card reveal"><div class="why-num">01</div><div class="why-icon">🏛️</div><div class="why-title">Premium Construction</div><p class="why-text">We source only the finest materials — imported marble, engineered hardwood, and Grade-A concrete — ensuring structures that stand for generations.</p></div>
@@ -667,7 +667,7 @@
       <div class="section-eyebrow">Get In Touch</div>
       <h2 class="section-title">Begin Your<br><em>Journey</em></h2>
       <p class="enquiry-body">Every extraordinary home begins with a conversation. Share your vision with us and our expert team will craft a living experience tailored precisely to your aspirations.</p>
-      <div class="contact-detail">+91 9311373023</div>
+      <div class="contact-detail">+91 8585942896</div>
       <div class="contact-detail">Dhanyashreehomespvtltd@gmail.com</div>
       <div class="contact-detail">Chattarpur, New Delhi — 110074</div>
     </div>
@@ -773,8 +773,35 @@
   let projOff=0;
   const cardW=444;
   const maxOff=-(track.children.length-2)*cardW;
-  document.getElementById('nextBtn').addEventListener('click',()=>{ projOff=Math.max(projOff-cardW,maxOff); track.style.transform=`translateX(${projOff}px)`; });
-  document.getElementById('prevBtn').addEventListener('click',()=>{ projOff=Math.min(projOff+cardW,0); track.style.transform=`translateX(${projOff}px)`; });
+
+  function moveCarousel(dir){
+    if(dir==='next') projOff=Math.max(projOff-cardW,maxOff);
+    else projOff=Math.min(projOff+cardW,0);
+    track.style.transform=`translateX(${projOff}px)`;
+  }
+
+  document.getElementById('nextBtn').addEventListener('click',()=>moveCarousel('next'));
+  document.getElementById('prevBtn').addEventListener('click',()=>moveCarousel('prev'));
+
+  // Keyboard left/right arrow navigation (only when carousel is in view)
+  document.addEventListener('keydown',(e)=>{
+    if(e.key==='ArrowRight') moveCarousel('next');
+    else if(e.key==='ArrowLeft') moveCarousel('prev');
+  });
+
+  // Mouse scroll navigation on the carousel section
+  let scrollCooldown=false;
+  const projSection=document.getElementById('projects');
+  projSection.addEventListener('wheel',(e)=>{
+    // Only hijack horizontal-ish or deliberate vertical scrolls over the carousel
+    if(scrollCooldown) return;
+    e.preventDefault();
+    const delta=e.deltaX!==0?e.deltaX:e.deltaY;
+    if(delta>30) moveCarousel('next');
+    else if(delta<-30) moveCarousel('prev');
+    scrollCooldown=true;
+    setTimeout(()=>{ scrollCooldown=false; },600);
+  },{passive:false});
 
   // Testimonials
   const testiTrack=document.getElementById('testiTrack');
