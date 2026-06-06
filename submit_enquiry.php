@@ -13,7 +13,7 @@ define('DB_USER',     'root');           // ← change
 define('DB_PASS',     'root');       // ← change
 define('DB_CHARSET',  'utf8mb4');
 
-define('MAIL_TO',     'bhuwansingh886043@gmail.com');  // ← destination inbox
+define('MAIL_TO',     'Dhanyashreehomespvtltd@gmail.com');  // ← destination inbox
 define('MAIL_FROM',   'bhuwansingh8860@gmail.com');
 define('MAIL_NAME',   'Dhanyashree Homes Website');
 
